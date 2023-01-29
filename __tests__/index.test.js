@@ -1,11 +1,13 @@
 import genDiff from '../src/index.js';
 import paths from '../src/paths.js';
 import fs from 'fs';
+import path from 'path';
+import { cwd } from 'node:process';
 
 test('filepaths', () => {
-    const fullPath = '/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__/file1.json';
-    expect(paths('file1.json')).toEqual(fullPath);
-    expect(paths('')).toEqual('/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__');
+    const fullPath = path.resolve(cwd(), '__fixtures__');
+    expect(paths('file1.json')).toEqual(path.join(fullPath, 'file1.json'));
+    expect(paths('')).toEqual(fullPath);
     expect(paths(fullPath)).toEqual(fullPath);
 });
 
