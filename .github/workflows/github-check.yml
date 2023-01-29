@@ -21,15 +21,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install
         run: |
-          npm ci
+          make install
         env:
           CI: true
       - name: Run Linter
         run: |
-          npx eslint .
+          make lint
       - name: Run Tests
         run: |
-          npm test
+          make test
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:

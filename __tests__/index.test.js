@@ -1,11 +1,16 @@
 import genDiff from '../src/index.js';
-import dataParsing from '../src/parsing.js';
 import paths from '../src/paths.js';
+import fs from 'fs';
 
-const file1 = dataParsing(paths('file1.json'));
-const file2 = dataParsing(paths('file2.json'));
-const expectedValue = dataParsing(paths('result_json.txt'));
+test('filepaths', () => {
+    const fullPath = '/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__/file1.json';
+    expect(paths('file1.json')).toBe(fullPath);
+    expect(paths('')).toBe('/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__');
+    expect(paths(fullPath)).toEqual(fullPath);
+});
+
+const expectedValue = fs.readFileSync(paths('result_json.txt'), 'utf-8');
 
 test('compare flat files', () => {
-  expect(genDiff(file1, file2)).toEqual(expectedValue);
+  expect(genDiff('file1.json', 'file2.json')).toEqual(expectedValue);
 });
