@@ -4,8 +4,8 @@ import fs from 'fs';
 
 test('filepaths', () => {
     const fullPath = '/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__/file1.json';
-    expect(paths('file1.json')).toBe(fullPath);
-    expect(paths('')).toBe('/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__');
+    expect(paths('file1.json')).toEqual(fullPath);
+    expect(paths('')).toEqual('/Users/valentinacerednicenko/Documents/fullstack-javascript-project-46/__fixtures__');
     expect(paths(fullPath)).toEqual(fullPath);
 });
 
