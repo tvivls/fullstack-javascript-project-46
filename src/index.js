@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import dataParsing from './parsing.js';
+import dataParsing from './parsers/parsing.js';
 import paths from './paths.js';
 import toString from '../formatting/toJSON.js';
 
@@ -21,9 +21,9 @@ const compare = (file1, file2) => {
 };
 
 const genDiff = (filepath1, filepath2) => {
-  const file1 = dataParsing(paths(filepath1));
-  const file2 = dataParsing(paths(filepath2));
-  return toString(compare(file1, file2));
+    const file1 = dataParsing(paths(filepath1));
+    const file2 = dataParsing(paths(filepath2));
+    return toString(compare(file1, file2));
 };
 
 export default genDiff;
