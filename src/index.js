@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import dataParsing from './parsers/parsing.js';
-import paths from './paths.js';
+import { paths } from './paths.js';
 import toString from '../formatting/toJSON.js';
 
 const compare = (file1, file2) => {
