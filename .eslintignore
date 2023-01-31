@@ -1,3 +1,4 @@
 src/index.js
 __tests__/index.test.js
 bin/gendiff.js
+src/parsers/parsing.js
