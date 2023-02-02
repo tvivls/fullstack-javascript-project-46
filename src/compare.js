@@ -15,9 +15,11 @@ const buildTree = (file1, file2) => {
       return { type: 'recursion', key, children: buildTree(value1, value2) };
     }
     if (!_.isEqual(value1, value2)) {
-      return { type: 'updated', key, 
-        value1: value1, 
-        value2: value2
+      return {
+        type: 'updated',
+        key,
+        value1,
+        value2,
       };
     }
     return { type: 'equal', key, value: value1 };
