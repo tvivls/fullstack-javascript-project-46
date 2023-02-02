@@ -19,12 +19,26 @@ test('filepaths', () => {
   expect(paths(fullPath)).toEqual(fullPath);
 });
 
-const expectedValue = fs.readFileSync(paths('result_json.txt'), 'utf-8');
+const expectedValueStylish = fs.readFileSync(paths('result_stylish.txt'), 'utf-8');
 
 test('compare flat JSON files', () => {
-  expect(genDiff('file1.json', 'file2.json')).toEqual(expectedValue);
+  expect(genDiff('file1.json', 'file2.json')).toEqual(expectedValueStylish);
 });
 
 test('compare flat YAML files', () => {
-  expect(genDiff('file1.yaml', 'file2.yaml')).toEqual(expectedValue);
+  expect(genDiff('file1.yaml', 'file2.yaml')).toEqual(expectedValueStylish);
+});
+
+test('compare flat YAML files (stylish)', () => {
+  expect(genDiff('file1.yaml', 'file2.yaml', 'stylish')).toEqual(expectedValueStylish);
+});
+
+const expectedValuePlain = fs.readFileSync(paths('result_plain.txt'), 'utf-8');
+
+test('compare flat JSON files (plain)', () => {
+  expect(genDiff('file1.json', 'file2.json', 'plain')).toEqual(expectedValuePlain);
+});
+
+test('compare flat YAML files (plain)', () => {
+  expect(genDiff('file1.yaml', 'file2.yaml', 'plain')).toEqual(expectedValuePlain);
 });
