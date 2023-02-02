@@ -42,3 +42,13 @@ test('compare flat JSON files (plain)', () => {
 test('compare flat YAML files (plain)', () => {
   expect(genDiff('file1.yaml', 'file2.yaml', 'plain')).toEqual(expectedValuePlain);
 });
+
+const expectedValueJson = fs.readFileSync(paths('result_json.txt'), 'utf-8');
+
+test('compare flat JSON files (json)', () => {
+  expect(genDiff('file1.json', 'file2.json', 'json')).toEqual(expectedValueJson);
+});
+
+test('compare flat YAML files (json)', () => {
+  expect(genDiff('file1.yaml', 'file2.yaml', 'json')).toEqual(expectedValueJson);
+});
