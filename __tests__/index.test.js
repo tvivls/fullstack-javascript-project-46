@@ -1,9 +1,8 @@
-import genDiff from '../src/index.js';
-import { paths } from '../src/paths.js';
+import { cwd } from 'node:process';
 import fs from 'fs';
 import path from 'path';
-import { cwd } from 'node:process';
-import { extname } from '../src/paths.js';
+import genDiff from '../src/index.js';
+import { paths, extname } from '../src/paths.js';
 
 const fullPath = path.resolve(cwd(), '__fixtures__');
 

@@ -8,9 +8,11 @@ const dataParsing = (filepath) => {
 
   if (format === '.json') {
     return JSON.parse(data);
-  } else if (format === '.yml' || format === '.yaml') {
+  } 
+  if (format === '.yml' || format === '.yaml') {
     return yaml.load(data);
   }
+  return;
 };
 
 export default dataParsing;

@@ -29,6 +29,7 @@ const stylish = (innerTree) => {
         return `${getValue(node.value1, '-')}${getValue(node.value2, '+')}`;
       case 'recursion':
         return `${indent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1).join('')}${indent(depth)}  }\n`;
+      default: throw new Error('Error');
     }
   });
   return `{\n${iter(innerTree, 1).join('')}}`;
