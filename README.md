@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/lb6ylovnjxextqgfhe3mz929L.svg)](https://asciinema.org/a/lb6ylovnjxextqgfhe3mz929L)
 ### Рекурсивное сравнение
 [![asciicast](https://asciinema.org/a/8VD4I9YFJxG4jyTCnLeMr93SE.svg)](https://asciinema.org/a/8VD4I9YFJxG4jyTCnLeMr93SE)
+### Плоский формат
+[![asciicast](https://asciinema.org/a/lcphWpZg13NpG69bjQy0NtLN5.svg)](https://asciinema.org/a/lcphWpZg13NpG69bjQy0NtLN5)
