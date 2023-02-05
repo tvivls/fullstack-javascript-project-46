@@ -7,13 +7,13 @@
 
 Difference Calculator is a program that determines the difference between two data structures.
 
-Utility Features:
-Support for different input formats: yaml, json
-Generating a report in the form of plain text, stylish and json
-
-### Install
+_____________________________
+### Installation
+```
 1. git clone https://github.com/tvivls/fullstack-javascript-project-46.git
 2. make install
+```
+______________________________
 
 ### Comparison of flat files (JSON)
 [![asciicast](https://asciinema.org/a/QHJGas4DjSG0Xrs2lnRZvbMFs.svg)](https://asciinema.org/a/QHJGas4DjSG0Xrs2lnRZvbMFs)
